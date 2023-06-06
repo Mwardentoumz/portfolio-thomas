@@ -16,12 +16,85 @@
   }
 }
 
+@layer base {
+  li {
+    @apply px-4;
+    @apply cursor-pointer
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
 }
+
+@font-face {
+  font-family: "burtons";
+  src: url("../../public/Burtons.otf");
+  font-weight: 100 1000;
+}
+
+.one:hover span:last-child {
+  width: 100%;
+}
+
+.two:hover span {
+  width: 50%;
+}
+
+.three:hover span {
+  height: 100%;
+}
+
+.test {
+  animation: morph 6s ease-in-out infinite;
+  background-position: 50%;
+  transition: all 1s ease-in-out;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+}
+
+.linearAnim{
+  
+  animation: animatedBackground 10s linear infinite;
+    -moz-animation: animatedBackground 10s linear infinite;
+    -webkit-animation: animatedBackground 10s linear infinite;
+    -ms-animation: animatedBackground 10s linear infinite;
+    -o-animation: animatedBackground 10s linear infinite;
+}
+
+@keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -300px 0; }
+}
+@-moz-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -300px 0; }
+}
+@-webkit-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -300px 0; }
+}
+@-ms-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -300px 0; }
+}
+@-o-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -300px 0; }
+}
+
