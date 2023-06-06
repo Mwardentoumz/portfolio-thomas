@@ -25,7 +25,7 @@ export default function Portfolio() {
             <div
                 className="text-4xl flex flex-col justify-center items-center font-bold inline text-[#8892b0] border-pink-600 pb-8">
                 <h1>My Work !</h1>
-                <p className="lg:text-3xl md:text-2xl sm:text-xl text-lg">Don't hesitate to visit the demos, or the code base on GitHub.</p>
+                <p className="lg:text-3xl md:text-2xl sm:text-xl text-lg">Do not hesitate to visit the demos, or the code base on GitHub.</p>
             </div>
 
             <div
