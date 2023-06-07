@@ -3,7 +3,7 @@
 export const projects = [
     {
         title: "ArgentBank",
-        description: "Authentification et autorisation, redux, redux toolkit et accès protégé, cette application communique avec une API d'authentification et permet à l'utilisatuer de se connecter, et de modifier son profil une fois connecté.",
+        description: "User log-in with JWT Token, profil page protected route and communication with MongoDB through back-end API, the user can log-in/out and mofidy his profile",
         image: "/homepage.png",
         stack : ["React", "Redux", "Redux Toolkit", "React Router", "Axios", "JWT", "NodeJS"],
         url: "https://argentbank-front.netlify.app/",

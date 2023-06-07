@@ -1,16 +1,17 @@
 import Image from 'next/image'
 
 import Navbar from '../components/Navbar'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import Hero from '@/components/Hero/Hero.jsx';
 import { motion } from 'framer-motion';
 import Portfolio from '@/components/Portfolio.jsx/Portfolio';
+import Contact from '@/components/Contact/Contact';
 
 
 
 
 export default function Home() {
-  const ScrolltoSkill = useRef()
+  
   const [darkMode, setDarkMode] = useState(false)
   const [bike, setBike] = useState(false)
 
@@ -20,9 +21,9 @@ export default function Home() {
   });
   const [cursorVariant, setCursorVariant] = useState("default");
 
-  console.log(mousePosition)
+  
 
-  const executeScroll = () => ScrolltoSkill.current.scrollIntoView()
+  
   const activateBike = () => { setBike(!bike) }
   const toggleDarkMode = () => { setDarkMode(!darkMode) }
 
@@ -69,10 +70,10 @@ export default function Home() {
   return (
     
     <div className={darkMode ? "dark" : ""}>
-      <main className="bg-white dark:bg-gray-900 p-10 duration-1000 max-w-[1400px] mx-auto">
+      <main className="bg-slate-100 dark:bg-gray-900 p-10 duration-1000 max-w-[1400px] mx-auto">
         <section className='min-h-screen flex flex-col'>
-          <Navbar toggleDarkMode={toggleDarkMode} executeScroll={executeScroll}/>
-          <Hero activateBike={activateBike} bike={bike} executeScroll={executeScroll}/>
+          <Navbar toggleDarkMode={toggleDarkMode} />
+          <Hero activateBike={activateBike} bike={bike} />
                     
           {bike && 
           <motion.div
@@ -86,8 +87,12 @@ export default function Home() {
           
         </section>
 
-        <section ref={ScrolltoSkill} className='min-h-screen flex flex-col'>
+        <section className='min-h-auto flex flex-col'>
           <Portfolio/>
+        </section>
+
+        <section className='min-h-screen flex flex-col'>
+          <Contact/>
         </section>
 
         
