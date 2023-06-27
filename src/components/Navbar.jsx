@@ -28,10 +28,10 @@ export default function Navbar({ toggleDarkMode, executeScroll }) {
         <ul className="hidden md:flex font-burtons">
 
           <li>
-            <Link className="hover:text-teal-600 " to="projects" smooth={true} duration={1000} offset={-80}>Projects</Link>
+            <Link className="hover:text-teal-600 " to="projects" smooth={true} duration={1000} >Projects</Link>
           </li>
           <li>
-            <Link className="hover:text-teal-600 " to="contact" smooth={true} duration={1000} offset={-80}>Contact</Link>
+            <Link className="hover:text-teal-600 " to="contact" smooth={true} duration={1000} >Contact</Link>
           </li>
 
 

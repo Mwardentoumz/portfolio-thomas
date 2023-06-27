@@ -22,17 +22,19 @@ export default function Portfolio() {
         <div
             name="projects"
             className="w-full h-auto mb-5">
-            <div
-                className="text-4xl flex flex-col justify-center items-center font-bold inline text-[#8892b0] border-pink-600 pb-8">
-                <h1>My Work !</h1>
-                <p className="lg:text-3xl md:text-2xl sm:text-xl text-lg">Do not hesitate to visit the demos, or the code base on GitHub.</p>
-            </div>
+
 
             <div
-                className="max-w-[1400px] lg:h-[780px] h-[1200px] dark:bg-gray-300 bg-white shadow-xl text-white font-burtons w-full mx-auto py-4 px-4 relative flex flex-col lg:flex-row group rounded-2xl items-center  p-5">
+                className="max-w-[1400px] h-[1200px] dark:bg-gray-300 bg-white shadow-xl text-white w-full mx-auto relative flex flex-col group rounded-2xl items-center p-5">
+
+                <div
+                    className="text-4xl flex flex-col justify-center items-center font-bold inline text-[#8892b0] border-pink-600 pb-8">
+                    <h1>My Work !</h1>
+                    <p className="lg:text-3xl md:text-2xl sm:text-xl text-lg">Do not hesitate to visit the demos, or you can go see the code on GitHub.</p>
+                </div>
                 <div
                     style={{ backgroundImage: `url(${projects[currentIndex].image})` }}
-                    className="linearAnim lg:w-2/3 w-full h-full bg-center shadow-md bg-cover duration-500 rounded-2xl min-h-[500px]">
+                    className="linearAnim w-full h-full bg-center shadow-md bg-cover duration-500 rounded-2xl min-h-[500px]">
                 </div>
                 {/** Left arrow */}
                 <div
@@ -47,11 +49,11 @@ export default function Portfolio() {
                 </div>
                 <div
 
-                    className="duration-300 ease-in lg:w-1/3 w-full flex flex-col text-[#8892b0] dark:text-[#8892b0]  items-center h-full p-5 rounded-2xl bg-center bg-cover duration-500">
-                    <h1 className="lg:text-4xl text-2xl mb-5">{projects[currentIndex].title}</h1>
+                    className="duration-300 ease-in w-full flex flex-col text-[#8892b0] dark:text-[#8892b0]  items-center p-5 rounded-2xl bg-center bg-cover duration-500 font-sans">
+                    <h1 className="lg:text-4xl text-2xl mb-5 font-bold">{projects[currentIndex].title}</h1>
                     <p className="lg:text-xl text-lg font-sans">{projects[currentIndex].description}</p>
 
-                    <div className="">
+                    <div className="mt-4">
                         <ul className="flex flex-col list-none text-xl font-sans">
                             {projects[currentIndex].stack.map((item, index) => (
                                 <li key={index}>{item}</li>

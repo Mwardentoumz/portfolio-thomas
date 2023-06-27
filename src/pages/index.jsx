@@ -81,7 +81,7 @@ export default function Home() {
           variants={variants}
           animate={cursorVariant}
           transition={{ ease: "easeOut", duration: 0.8,  }}
-          className='cursor rounded-full fixed top-0 left-0 w-20 h-20 '>
+          className='cursor rounded-full fixed top-0 left-0 w-20 h-20 z-100'>
             <img src="/cycling2.gif" alt="" className="" />
           </motion.div>}
           
